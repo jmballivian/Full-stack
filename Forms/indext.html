@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Frases de Los Simpson</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario y Frases de Los Simpson</h1>
+        
+        <form id="userForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required 
+                   oninvalid="this.setCustomValidity('Por favor, completa este campo')"
+                   oninput="this.setCustomValidity('')">
+            
+            <label for="age">Edad:</label>
+            <input type="number" id="age" required min="1" max="100"
+                   oninvalid="this.setCustomValidity('Por favor, ingresa una edad entre 1 y 100')"
+                   oninput="this.setCustomValidity('')">
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+        <button id="simpsonQuote">Mostrar frase Simpson</button>
+        <div id="quoteDisplay"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
